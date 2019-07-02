@@ -1,4 +1,4 @@
-import { GET, STARTED, SUCCESS, FAILURE } from './actions';
+import { STARTED, SUCCESS, FAILURE } from './actions';
 
 const init = {
   loading: false,
@@ -7,9 +7,6 @@ const init = {
 
 function reducer(state = init, action) {
   switch (action.type) {
-    case GET: {
-      return action.result;
-    }
     case STARTED: {
       return { ...state, loading: true };
     }
