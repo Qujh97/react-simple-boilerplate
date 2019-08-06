@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const ROOT_PATH = path.resolve(__dirname);
+const ROOT_PATH = path.resolve(__dirname, '../');
 const APP_PATH = path.join(ROOT_PATH, '/src/');
 const BUILD_PATH = path.join(ROOT_PATH, '/build/');
 
@@ -62,17 +62,6 @@ const webpackConfig = {
       hash: true
     })
   ], // 对应的插件
-  devServer: {
-    host: 'localhost',
-    port: '3000',
-    proxy: {
-      '/weather': {
-        target: 'http://v.juhe.cn',
-        changeOrigin: true, // 如果接口跨域，需要进行这个参数配置
-      }
-    }
-  }, // 开发服务器配置
-  mode: 'development' // 模式配置
 };
 
 module.exports = webpackConfig;

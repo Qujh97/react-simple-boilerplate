@@ -1,17 +1,13 @@
 import React from 'react';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import {
-  Todo,
-  Filter,
-  FaCCTest,
-  Weather
+  Hello,
+  NotFound,
 } from './containers';
 
 const routes = [
-  { path: '/', exact: true, component: Todo },
-  { path: '/filter', component: Filter },
-  { path: '/facc', component: FaCCTest },
-  { path: '/weather', component: Weather }
+  { path: '/', exact: true, component: Hello },
+  { component: NotFound }
 ];
 
 const renderRoutes = () => (

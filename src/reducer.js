@@ -1,12 +1,8 @@
 import { combineReducers } from 'redux';
-import todoReducer from './containers/Todo/reducer';
-import filterReducer from './containers/Filter/reducer';
-import weatherReducer from './containers/Weather/reducer';
+import helloReducer from './containers/Hello/reducer';
 
 const rootReducer = combineReducers({
-  todo: todoReducer,
-  filter: filterReducer,
-  weather: weatherReducer
+  hello: helloReducer
 });
 
 export default rootReducer;

@@ -2,12 +2,13 @@
  * 高阶组件(继承方式)
  */
 
-const editPropsHocEt = (WrappedComponent, newProps) => class NewComponent extends WrappedComponent {
+const editPropsHocEt = newProps => WrappedComponent => class NewComponent extends WrappedComponent {
   componentDidMount() {
-    console.log('rewrite didmount');
+    console.log('didmount HocEt');
   }
 
   render() {
+    this.props = { ...this.props, ...newProps };
     return super.render();
   }
 };

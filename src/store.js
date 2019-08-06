@@ -6,7 +6,9 @@ const devTool = window.devToolsExtension ? window.devToolsExtension() : f => f;
 const store = createStore(
   reducer,
   compose(
-    applyMiddleware(thunk),
+    applyMiddleware(
+      thunk
+    ),
     devTool
   )
 );
