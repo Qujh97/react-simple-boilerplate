@@ -20,8 +20,7 @@ module.exports = merge(baseWebpackConfig, {
         target: config.apiUrl, // 将 localhost:port/api 代理到这个网址
         changeOrigin: true, // 如果接口跨域，需要进行这个参数配置
         pathRewrite: { '^/api': '' }, // 重写路径，防止/api带入最终url
-        // 未配置../src/config.js时，接口为/api/index
-      },
+      }
     }
   }, // 开发服务器配置
   mode: 'development' // 模式配置
